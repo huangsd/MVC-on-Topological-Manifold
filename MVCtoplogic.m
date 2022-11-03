@@ -1,5 +1,5 @@
 % Multi-view Clustering on Topological Manifold
-function [result, S, Tim, Obj] = MVCtoplogic(data,labels, alpha, beta, knn, normData)
+function [y, S, Tim, Obj] = MVCtoplogic(data,labels, alpha, beta, knn, normData)
 % [result, mu, G, Z, S, lambda] = MVCtoplogic(data,labels, alpha, beta, knn, normData)
 % data: cell array, view_num by 1, each array is num_samp by d_v
 % num_clus: number of clusters
@@ -155,7 +155,7 @@ y = y';
 if clusternum ~= num_clus
     sprintf('Can not find the correct cluster number: %d', num_clus)
 end
-result = EvaluationMetrics(labels, y);
+% result = EvaluationMetrics(labels, y);
 end
 
 
